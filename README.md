@@ -55,11 +55,11 @@
 ### 安装/更新方式（二选一）
 Vmess+websocket+TLS+Nginx+Website
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh) | tee v2ray_ins.log
+bash <(curl -L -s https://raw.githubusercontent.com/lj407269507/v2ray-cba/master/install.sh) | tee v2ray_ins.log
 ```
 Vmess + HTTP2 over TLS
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install_h2.sh) | tee v2ray_ins_h2.log
+bash <(curl -L -s https://raw.githubusercontent.com/lj407269507/v2ray-cba/master/install_h2.sh) | tee v2ray_ins_h2.log
 ```
 ### 启动方式
 
