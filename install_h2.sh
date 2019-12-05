@@ -2,10 +2,10 @@
 
 #====================================================
 #	System Request:Debian 7+/Ubuntu 14.04+/Centos 6+
-#	Author:	wulabing
+#	Author:	JunYue
 #	Dscription: V2ray ws+tls onekey 
 #	Version: 3.3.1
-#	Blog: https://www.wulabing.com
+#	Blog: https://www.JunYue.com
 #	Official document: www.v2ray.com
 #====================================================
 
@@ -224,7 +224,7 @@ ssl_install(){
 
 }
 domain_check(){
-    stty erase '^H' && read -p "请输入你的域名信息(eg:www.wulabing.com):" domain
+    stty erase '^H' && read -p "请输入你的域名信息(eg:www.JunYue.com):" domain
     domain_ip=`ping ${domain} -c 1 | sed '1{s/[^(]*(//;s/).*//;q}'`
     echo -e "${OK} ${GreenBG} 正在获取 公网ip 信息，请耐心等待 ${Font}"
     local_ip=`curl -4 ip.sb`
@@ -291,9 +291,9 @@ v2ray_conf_add(){
     rm -rf ${v2ray_conf}
     rm -rf ${client_conf}
     cd /etc/v2ray
-    wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/config.json
+    wget  https://raw.githubusercontent.com/lj407269507/v2ray-cba/master/http2/config.json
     judge "config.json 下载"
-    wget  https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/http2/client.json
+    wget  https://raw.githubusercontent.com/lj407269507/v2ray-cba/master/http2/client.json
     judge "client.json 下载"
     random_UUID
     modify_port_UUID ${v2ray_conf}
@@ -307,7 +307,7 @@ vmess_qr_config(){
     cat >/etc/v2ray/vmess_qr.json <<-EOF
 {
   "v": "2",
-  "ps": "wulabing_${domain}",
+  "ps": "JunYue_${domain}",
   "add": "${domain}",
   "port": "${port}",
   "id": "${UUID}",
