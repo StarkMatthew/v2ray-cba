@@ -2,10 +2,10 @@
 
 #====================================================
 #	System Request:Debian 9+/Ubuntu 18.04+/Centos 7+
-#	Author:	wulabing
+#	Author:	Junyue
 #	Dscription: V2ray ws+tls onekey 
 #	Version: 5.1
-#	email:admin@wulabing.com
+#	email:admin@JunYue.com
 #	Official document: www.v2ray.com
 #====================================================
 
@@ -207,7 +207,7 @@ modify_nginx(){
 web_camouflage(){
     ##请注意 这里和LNMP脚本的默认路径冲突，千万不要在安装了LNMP的环境下使用本脚本，否则后果自负
     rm -rf /home/wwwroot && mkdir -p /home/wwwroot && cd /home/wwwroot
-    git clone https://github.com/wulabing/3DCEList.git
+    git clone https://github.com/lj407269507/3DCEList.git
     judge "web 站点伪装"
 }
 v2ray_install(){
@@ -308,7 +308,7 @@ ssl_install(){
     judge "安装 SSL 证书生成脚本"
 }
 domain_check(){
-    read -p "请输入你的域名信息(eg:www.wulabing.com):" domain
+    read -p "请输入你的域名信息(eg:www.JunYue.com):" domain
     domain_ip=`ping ${domain} -c 1 | sed '1{s/[^(]*(//;s/).*//;q}'`
     echo -e "${OK} ${GreenBG} 正在获取 公网ip 信息，请耐心等待 ${Font}"
     local_ip=`curl -4 ip.sb`
@@ -366,7 +366,7 @@ acme(){
 }
 v2ray_conf_add(){
     cd /etc/v2ray
-    wget https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/tls/config.json -O config.json
+    wget https://raw.githubusercontent.com/lj407269507/V2Ray_ws-tls_bash_onekey/master/tls/config.json -O config.json
 modify_port_UUID
 judge "V2ray 配置修改"
 }
